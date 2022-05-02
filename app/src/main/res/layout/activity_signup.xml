@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1"
+    tools:context=".UserDetails.login">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/trySignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:orientation="vertical"
+            android:textAlignment="gravity">
+
+            <TextView
+                android:id="@+id/signupPassHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="@string/sign_up"
+                android:textColor="@color/color2"
+                android:textSize="40sp"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/signupUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textbar_style"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:hint="@string/enter_user_name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:letterSpacing=".04"
+                android:maxLength="20"
+                android:textColor="@color/color2"
+                android:textColorHint="@color/color2"
+                android:textCursorDrawable="@drawable/cursor"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/userWarnSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/medium"
+                android:textColor="#FF0000"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteY="50dp" />
+
+            <EditText
+                android:id="@+id/signupPassUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbar_style"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:hint="@string/enter_number_password"
+                android:importantForAutofill="no"
+                android:inputType="numberPassword"
+                android:letterSpacing=".04"
+                android:maxLength="15"
+                android:textColor="@color/color2"
+                android:textColorHint="@color/color2"
+                android:textCursorDrawable="@drawable/cursor"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteY="90dp" />
+
+            <TextView
+                android:id="@+id/signUpNumWarn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/medium"
+                android:text="@string/please_enter_password_it_is_mandatory"
+                android:textColor="#FF0000"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteY="140dp" />
+
+            <EditText
+                android:id="@+id/signupTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbar_style"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:hint="@string/enter_text_password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:letterSpacing=".04"
+                android:textColor="@color/color2"
+                android:textColorHint="@color/color2"
+                android:textCursorDrawable="@drawable/cursor"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteY="180dp" />
+
+            <TextView
+                android:id="@+id/passWarnSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/medium"
+                android:text="@string/please_enter_password_it_is_mandatory"
+                android:textColor="#FF0000"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteY="230dp" />
+
+            <EditText
+                android:id="@+id/signupPostal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbar_style"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:hint="@string/enter_pin_code"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:letterSpacing=".04"
+                android:maxLength="6"
+                android:textColor="@color/color2"
+                android:textColorHint="@color/color2"
+                android:textCursorDrawable="@drawable/cursor"
+                tools:ignore="TextFields,TextContrastCheck"
+                tools:layout_editor_absoluteY="361dp" />
+
+            <TextView
+                android:id="@+id/pinWarnSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/medium"
+                android:text="@string/please_enter_pin_code_it_is_mandatory"
+                android:textColor="#FF0000"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteY="411dp" />
+
+            <EditText
+                android:id="@+id/signupPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbar_style"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:hint="@string/enter_phone_no"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:letterSpacing=".04"
+                android:maxLength="10"
+                android:textColor="@color/color2"
+                android:textColorHint="@color/color2"
+                android:textCursorDrawable="@drawable/cursor"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteY="270dp" />
+
+            <TextView
+                android:id="@+id/phoneWarnSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/medium"
+                android:text="@string/please_enter_phone_no_it_is_mandatory"
+                android:textColor="#FF0000"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteY="321dp" />
+
+            <EditText
+                android:id="@+id/signupDob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbar_style"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:hint="@string/enter_date_of_birth"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:letterSpacing=".04"
+                android:maxLength="10"
+                android:textColor="@color/color2"
+                android:textColorHint="@color/color2"
+                android:textCursorDrawable="@drawable/cursor"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteY="451dp" />
+
+            <TextView
+                android:id="@+id/dobWarnSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/medium"
+                android:text="@string/please_enter_date_of_birth_it_is_mandatory"
+                android:textColor="#FF0000"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteY="501dp" />
+
+            <CheckBox
+                android:id="@+id/saveForLater"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:buttonTint="@color/color2"
+                android:checked="true"
+                android:fontFamily="@font/regular"
+                android:letterSpacing=".04"
+                android:text="@string/save_details_for_later"
+                android:textColor="@color/color2"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/color2"
+                android:fontFamily="sans-serif-light"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/done"
+                android:textColor="@color/color1"
+                android:textColorHighlight="@color/color2"
+                android:textColorLink="@color/color2"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/trySignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_bordered_ripple"
+        android:backgroundTint="@color/color1"
+        android:fontFamily="@font/medium"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/try_to_sign_in"
+        android:textColor="@color/color2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

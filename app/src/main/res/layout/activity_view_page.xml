@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1"
+    tools:context=".ViewPage">
+
+    <ImageView
+        android:id="@+id/backToMainFromView"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_bordered_ripple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="false"
+        android:contentDescription="@string/editbutton"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_edit"
+        app:backgroundTint="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/author2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backToMainFromView"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="35dp"
+                android:fontFamily="@font/bold"
+                android:text="@string/default_title"
+                android:textColor="@color/color2"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="56dp" />
+
+            <LinearLayout
+                android:id="@+id/Bank_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/card_layout"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/default_bank_number"
+                    android:textColor="@color/color1"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginBottom="45dp"
+                    android:fontFamily="@font/medium"
+                    android:text="@string/default_ifsc"
+                    android:textColor="@color/color1"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Card_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/card_layout"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="45dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/default_credit_num"
+                        android:textColor="@color/color1"
+                        android:textSize="28sp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="45dp"
+                        android:layout_marginBottom="45dp">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:fontFamily="@font/medium"
+                            android:text="@string/cvv"
+                            android:textColor="@color/color1"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="56dp"
+                            android:fontFamily="@font/medium"
+                            android:text="@string/default_exdate"
+                            android:textColor="@color/color1"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/medium"
+                            android:text="@string/default_cvv_no"
+                            android:textColor="@color/color1"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView18"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="@string/to_copy_tap_the_text"
+                android:textColor="@color/color2"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/author2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backToMainFromView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/ViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="@string/content"
+                android:textAlignment="center"
+                android:textColor="@color/color2"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/userLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userIdHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/user_name"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/userIdTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyUserId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    android:maxWidth="60dp"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phoneNoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/phoneNoHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/phone_no"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/phoneNoTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyPhoneNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/passwordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/passwordHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/password"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/passWordTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bankAccountLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bankAccountHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/bank_account"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bankAccountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyBankAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ifscLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ifscHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/ifsc_code"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ifscTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyIfsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardNoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cardNoHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/card_no"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/cardNoTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyCardNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cvvLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/cvv"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/cvvTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyCvv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/exDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/exDateHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/expire_date"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/exDateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyExDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pinLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pinHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/pin"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/pinTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/addressHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/address"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/noteLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/textbar_style">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/noteHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/light"
+                        android:text="@string/note"
+                        android:textColor="@color/color2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/noteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/medium"
+                        android:text="@string/content"
+                        android:textColor="@color/color2"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/copyNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_without_border"
+                    android:contentDescription="@string/copybutton"
+                    app:srcCompat="@drawable/ic_baseline_content_copy_60" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/author2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/regular"
+        android:text="@string/created_by_arup_basak"
+        android:textColor="@color/color2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

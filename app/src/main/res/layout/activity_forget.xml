@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color1"
+    tools:context=".UserDetails.login">
+
+
+    <ImageView
+        android:id="@+id/back_button_forget"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/ForgetPassHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:text="@string/forget_page"
+        android:textColor="@color/color2"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ForgetPassHeading">
+
+        <EditText
+            android:id="@+id/ForgetUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbar_style"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="@string/enter_user_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="@color/color2"
+            android:textColorHint="@color/color2"
+            android:textCursorDrawable="@drawable/cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/forgetTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/textbar_style"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="@string/enter_text_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="@color/color2"
+            android:textColorHint="@color/color2"
+            android:textCursorDrawable="@drawable/cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ForgetUser"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/ForgetPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/textbar_style"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="@string/enter_pin_code"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/color2"
+            android:textColorHint="@color/color2"
+            android:textCursorDrawable="@drawable/cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ForgetPhoneNo"
+            tools:ignore="TextFields,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/ForgetPhoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/textbar_style"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="@string/enter_phone_no"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/color2"
+            android:textColorHint="@color/color2"
+            android:textCursorDrawable="@drawable/cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgetTextPassword"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/ForgetDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/textbar_style"
+            android:ems="10"
+            android:fontFamily="@font/regular"
+            android:hint="@string/enter_date_of_birth"
+            android:importantForAutofill="no"
+            android:inputType="date"
+            android:textColor="@color/color2"
+            android:textColorHint="@color/color2"
+            android:textCursorDrawable="@drawable/cursor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ForgetPin"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/userWarnForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:text="@string/please_enter_user_name_it_is_mandatory"
+            android:textColor="#FF0000"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/ForgetUser"
+            app:layout_constraintTop_toBottomOf="@+id/ForgetUser" />
+
+        <TextView
+            android:id="@+id/passWarnForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:text="@string/please_enter_password_it_is_mandatory"
+            android:textColor="#FF0000"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/forgetTextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/forgetTextPassword" />
+
+        <TextView
+            android:id="@+id/phoneWarnForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:text="@string/please_enter_phone_no_it_is_mandatory"
+            android:textColor="#FF0000"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/ForgetPhoneNo"
+            app:layout_constraintTop_toBottomOf="@+id/ForgetPhoneNo" />
+
+        <TextView
+            android:id="@+id/pinWarnForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:text="@string/please_enter_pin_code_it_is_mandatory"
+            android:textColor="#FF0000"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/ForgetPin"
+            app:layout_constraintTop_toBottomOf="@+id/ForgetPin" />
+
+        <TextView
+            android:id="@+id/dobWarnForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            android:text="@string/please_enter_date_of_birth_it_is_mandatory"
+            android:textColor="#FF0000"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/ForgetDob"
+            app:layout_constraintTop_toBottomOf="@+id/ForgetDob" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/color2"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/try_to_recover"
+        android:textColor="@color/color1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+
+</LinearLayout>

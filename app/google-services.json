@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "898848652462",
+    "project_id": "datonal",
+    "storage_bucket": "datonal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898848652462:android:f23ac5f05dbd2eec7a813f",
+        "android_client_info": {
+          "package_name": "com.arup.datonal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898848652462-qjnhqc26uf75bkgo21j920tgtppppamg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiG6XlQkRIAvoleOw2_LoZ4oimMilGMhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898848652462-qjnhqc26uf75bkgo21j920tgtppppamg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

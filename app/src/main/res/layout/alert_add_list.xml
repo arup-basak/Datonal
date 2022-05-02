@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alert_box"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/userpasswordbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/color2"
+        android:fontFamily="@font/medium"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/user_password"
+        android:textColor="@color/color1" />
+
+    <Button
+        android:id="@+id/bankdetailsbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/color2"
+        android:fontFamily="@font/medium"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/bank_details"
+        android:textColor="@color/color1" />
+
+    <Button
+        android:id="@+id/carddetailsbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/color2"
+        android:fontFamily="@font/medium"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/card_details"
+        android:textColor="@color/color1" />
+
+    <Button
+        android:id="@+id/notesbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/color2"
+        android:fontFamily="@font/medium"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/notes"
+        android:textColor="@color/color1" />
+
+    <Button
+        android:id="@+id/allfieldbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/color2"
+        android:fontFamily="@font/medium"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/all_field"
+        android:textColor="@color/color1" />
+
+
+    <Button
+        android:id="@+id/othersbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/color2"
+        android:fontFamily="@font/medium"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/others"
+        android:textColor="@color/color1" />
+</LinearLayout>
